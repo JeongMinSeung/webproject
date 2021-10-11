@@ -1,0 +1,378 @@
+/*�ΰ�����*/
+.logo{
+    float: left;
+    text-align:center;
+    color:#FFF;
+}
+
+.logo>p{
+	font-weight:bold;
+}
+
+.logo>p:nth-child(1){
+	font-size:35px;
+	margin:10px 0px -10px 0px !important;
+}
+.logo>p:nth-child(2){
+	font-size:18px;
+}
+
+/* �޴� ��Ÿ�� */
+.tab{
+	position:relative;
+	padding:5px;
+	font-size:18px;
+	font-family: 'NotoSansKR-Bold';
+}
+
+nav ul li .tab::before{
+	content:"";
+	height:2px;
+	width:0px;
+	background-color:transparent;
+	border-radius:5px;
+	transition:0.2s;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+nav ul li:hover .tab::before{
+	width:100%;
+	background-color:#FFF;
+}
+
+/* �ܹ��� �޴� ��Ÿ�� */
+#total_view{
+	width:50px !important;
+	padding-top:7px;
+}
+
+#total_view>img{
+	width:30px;
+}
+
+/* section 공통 */
+
+section .content_area ul li p{
+	font-size:20px;
+    margin-top:20px;
+}
+
+/* Section1 ��Ÿ�� */
+.s1 .content_area .title_wrap{
+	transform: translateY(300px);
+    transition: 1.3s;
+}
+
+.s1 .content_area .title_wrap.on{
+    transform: translateY(0);
+}
+
+.s1 .content_area .title_wrap span{
+    font-size:45px;
+    line-height:75px;
+}
+
+.s1 .content_area span:nth-of-type(2){
+    font-size:25px;
+}
+
+.s1 .content_area p{
+    font-size:23px;
+    margin-top:40px;
+    transform: translateY(300px);
+    transition: 1.8s;
+}
+
+.s1 .content_area p.on{
+	transform: translateY(0);
+}
+
+/* Section2 ��Ÿ�� */
+.title_box span{
+    font-size:45px;
+    font-family:"NotoSansKR-Black","serif";
+    line-height:75px;
+    text-align:center;
+    color:#13123a;
+}
+
+.title_box p{
+    font-size:23px;
+    margin-top:40px;
+}
+
+.s2 .content_area ul li div{
+	width:200px;
+	height:200px;
+	background-color:#BDBDBD;
+}
+
+/* .s2 .content_area ul li p{
+	font-size:23px;
+    margin-top:20px;
+} */
+
+/* Section3 ��Ÿ�� */
+
+/* .s3 .content_area>ul>li>p{
+	font-size:23px;
+    margin-top:20px;
+} */
+
+.s3 .comment_area{
+	text-align:left;
+	padding:30px 50px;
+}
+
+.s3 .comment_area span{
+	font-size:40px;
+	font-family:"NotoSansKR-Bold","serif";
+}
+
+.s3 .comment_area p:nth-child(2){
+	font-size:20px;
+	padding-top:20px;
+}
+
+.s3 .comment_area p:nth-child(3){
+	font-size:15px;
+	padding-top:10px;
+	padding-bottom:20px;
+	color:#5D5D5D;
+	font-family:"NotoSansKR-Regular","serif";
+}
+
+.s3 .comment_area a{
+	color:#2A0066;
+}
+
+/* Section4 ��Ÿ�� */
+
+
+/* ���������� ��� */
+.banner_wrap{
+	position: relative;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height:500px;
+	background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../image/sub_banner.jpg);
+	background-size:cover;
+	background-position:bottom center;
+}
+
+.sub_title{
+	color: #fff;
+	text-align: center;
+}
+
+.sub_title::after{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	content: "";
+	width:2px;
+	height:110px;
+	background-color: #fff;
+}
+
+.sub_title span{
+	font-family: "NotoSansKR-Thin","serif";
+	letter-spacing: 7px;
+	color: rgba(255,255,255,0.5);
+	font-size: 20px;
+}
+
+.sub_title dl dt{
+	font-size:45px;
+	padding: 10px 0 20px;
+}
+
+.sub_title dl dd{
+	font-family: "NotoSansKR-Thin","serif";
+	font-size: 20px;
+}
+
+.con1, .con2{
+	width:1000px;
+	margin: 150px auto;
+}
+
+.con1 h2{
+	display: inline-block;
+	position: relative;
+	font-size: 35px;
+	font-family:"NotoSansKR-Medium","serif";
+	padding:10px 0;
+}
+
+.con1 h2::before{
+	display: block;
+	position: absolute;
+	content: "";
+	width:30%;
+	height:3px;
+	background-color: #2A0066;
+	top:0;
+	left: 0;
+}
+
+.con1 h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: #5587ED;
+    top: 0;
+    left: 30%;
+}
+
+.con1 p{
+	font-size:18px;
+	font-family:"NotoSansKR-Thin","serif";
+	margin:50px 0;
+	line-height: 40px;
+}
+
+.con2{}
+
+.con2 table{
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+	border-bottom: 1px solid #999;
+    empty-cells: show;
+	background-color: #f4f4f4;
+}
+
+.con2 table caption{
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: -1000em;
+}
+
+.con2 table tbody tr td{
+	text-align: center;
+	height: 100px;
+	background-color: #fff;
+	font-family:"NotoSansKR-Light","serif";
+}
+
+.con2 table tbody tr:nth-of-type(2) td{
+	border-right: 1px solid #ccc;
+}
+
+.con2 table tbody tr:nth-of-type(2) td:last-child{
+	border-right: inherit;
+}
+
+.con2 tr:nth-of-type(4) td button{
+	position: relative;
+	background: #003399;
+    color: #fff;
+    padding: 12px;
+    width: 150px;
+	cursor: pointer;
+	text-align: left;
+}
+
+.con2 tr:nth-of-type(4) td button::after{
+	position: absolute;
+	right:10px;
+	top:50%;
+	transform: translateY(-50%);
+	width:15px;
+	height: 15px;
+	display: block;
+	content: "";
+	background: url("../image/down.png") no-repeat center;
+	background-size: cover;
+}
+
+.con2 table tbody tr th {
+	border-right: 1px solid #ccc;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    font-size: 18px;
+    color: #333;
+    line-height: 24px;
+    position: relative;
+}
+
+.con2 table tbody tr th:last-child{
+	border-right: inherit;
+}
+
+/* Footer ��Ÿ�� */
+footer .company_area span{
+	font-family:"NotoSansKR-Medium","serif";
+	font-size:17px;
+	display:block;
+}
+
+footer .company_area p{
+	font-family:"NotoSansKR-Thin","serif";
+	font-size:15px;
+	padding:5px 0;
+	color:#000;
+}
+
+footer .company_area .company_info{
+	padding-top:20px;
+}
+
+footer .company_area>p{
+	padding-top:20px;
+	color:#525252;
+}
+
+/* ���̵�׺���̼�(����������ǥ�ÿ�) ��Ÿ�� */
+.side_nav ul li a {
+	position:relative;
+	width:50px;
+	height:100%;
+	display:block;
+	font-size:16px;
+	text-align:center;
+	opacity:0.5;
+	color:#fff; /* 추가 */
+}
+
+.side_nav.black ul li a{
+	color:black;
+}
+
+.side_nav.black ul li a::before{
+	background: black;
+}
+
+
+.side_nav ul li a::before {
+	position:absolute;
+	top:0;
+	right:0;
+	content:'';
+	height:100%;
+	width:2px;
+	transition:width 0.2s ease-in-out, background 0.2s ease-in-out;
+	opacity:0.5;
+	background: #fff;
+}
+
+.side_nav ul li a.active {
+	font-weight:bold;
+	opacity:1;
+}
+
+.side_nav ul li a.active::before {
+	width:3px;
+	opacity:1;
+}
