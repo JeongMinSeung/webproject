@@ -130,13 +130,13 @@ nav ul li{
 }
 
 .s1 .content_area *{
-	overflow:hidden;
   font-family: 'NotoSansKR-Bold';
 }
 
 .s1 .content_area{
     width:100%;
     padding:0 100px;
+    overflow:hidden;
 }
 
 /* Section2 占쏙옙占싱아울옙 */
