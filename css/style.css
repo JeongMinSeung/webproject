@@ -348,11 +348,11 @@ footer .company_area>p{
 }
 
 .side_nav.black ul li a{
-	color:black;
+	color:#13123a;
 }
 
 .side_nav.black ul li a::before{
-	background: black;
+	background: #13123a;
 }
 
 
