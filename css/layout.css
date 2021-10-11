@@ -44,6 +44,11 @@ nav ul li{
     font-weight: bold;
     padding:20px 60px;
     color:#FFF;
+    cursor:pointer;
+}
+
+nav ul li * {
+    cursor:pointer;
 }
 /* 占쏙옙占싱듸옙 占쌓븝옙占쏙옙抉占�(占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙표占시울옙) 占쏙옙占싱아울옙 */
 .side_nav{
@@ -70,13 +75,22 @@ nav ul li{
 	height:17vh;
 	padding:16px 0px;
 	transition:opacity 0.2s ease-in-out, color 0.2s ease-in-out;
+	cursor:pointer;
 }
 
+.side_nav ul li *{
+	cursor:pointer;
+}
 /* 占쌤뱄옙占쏙옙 占쌨댐옙 占쏙옙占싱아울옙 */
 .viewall{
 	float:left;
-    padding:34.5px 20px;
-    margin-right:-20px;
+	padding:34.5px 20px;
+	margin-right:-20px;
+	cursor:pointer;
+}
+
+.viewall *{
+	cursor:pointer;
 }
 
 .viewall div{

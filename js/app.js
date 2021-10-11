@@ -81,19 +81,27 @@ $(window).on('scroll',function(){
 	if(sct >= s1 && sct < s2){
 		$('.side_nav').removeClass('black');
 		$('.side_nav>ul>li').eq(0).children('a').addClass('active');
+		$('.title_wrap').addClass('on');
+		$('.subtitle').addClass('on');
 	}else if(sct >= s2 && sct < s3){
 		$('.side_nav').removeClass('black');
 		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(1).children('a').addClass('active');
+		$('.title_wrap').removeClass('on');
+		$('.subtitle').removeClass('on');
 		// $('.side_nav').removeClass('black');
 	}else if(sct >= s3 && sct < s4){
 		$('.side_nav').removeClass('black');
 		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(2).children('a').addClass('active');
+		$('.title_wrap').removeClass('on');
+		$('.subtitle').removeClass('on');
 	}else if(sct >= s4){
 		$('.side_nav').removeClass('black');
 		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(3).children('a').addClass('active');
+		$('.title_wrap').removeClass('on');
+		$('.subtitle').removeClass('on');
 	}
 })
 

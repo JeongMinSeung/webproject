@@ -2,11 +2,15 @@
 .logo{
     float: left;
     text-align:center;
-    color:#FFF;
+    color:#FFF;   
 }
 
 .logo>p{
 	font-weight:bold;
+}
+
+.logo * {
+	cursor:pointer;
 }
 
 .logo>p:nth-child(1){
