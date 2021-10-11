@@ -40,11 +40,31 @@ var scrollevent = true;
 // });
 
 $(document).ready(function(){
-
-    // $('h2').addClass('on');
     $('.title_wrap').addClass('on');
-	$('.subtitle').addClass('on');
-	$('.side_nav li:nth-child(1) a').addClass('active');
+    $('.subtitle').addClass('on');
+    $('.side_nav li:nth-child(1) a').addClass('active');
+
+// 사업분야 이미지 애니메이션
+
+slidingBox('.a1',800,'url(../image/test.png)no-repeat',100);
+slidingBox('.a2',500,'url(../image/test.png)no-repeat',700);
+slidingBox('.a3',500,'url(../image/test.png)no-repeat',900);
+
+function slidingBox(item, speed, color, delay){
+	$(item).append(
+		$('<div class="inner">').css({
+			'width':'100%','height':'100%',
+			'position':'absolute', 'top':'0px','left':'-100%',
+			'background':color,
+			'background-size':'cover'
+		}).delay(delay).animate({'left':'0%'},speed,'easeOutExpo')
+			// $(item).css({'color':color})
+			// $(this).animate({'left':'100%'},speed,'easeInExpo', function(){
+			// 	$(this).remove();
+			// })
+		
+	)
+}
 })
 
 $(window).on('scroll',function(){
@@ -90,30 +110,6 @@ $('.side_nav ul li').on('click', function (e) {
 		scrollTop: target_pos
 	}, 700, 'swing');
 });
-
-
-// 사업분야 이미지 애니메이션
-
-slidingBox('.a1',800,'url(../image/test.png)no-repeat',100);
-slidingBox('.a2',500,'url(../image/test.png)no-repeat',700);
-slidingBox('.a3',500,'url(../image/test.png)no-repeat',900);
-
-function slidingBox(item, speed, color, delay){
-	$(item).append(
-		$('<div class="inner">').css({
-			'width':'100%','height':'100%',
-			'position':'absolute', 'top':'0px','left':'-100%',
-			'background':color,
-			'background-size':'cover'
-		}).delay(delay).animate({'left':'0%'},speed,'easeOutExpo')
-			// $(item).css({'color':color})
-			// $(this).animate({'left':'100%'},speed,'easeInExpo', function(){
-			// 	$(this).remove();
-			// })
-		
-	)
-}
-
 
 //var posTop =(page-1) * $(window).height();
 //    mHtml.animate({scrollTop : posTop});
