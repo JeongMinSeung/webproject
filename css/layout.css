@@ -69,6 +69,7 @@ nav ul li{
 	position:relative;
 	height:17vh;
 	padding:16px 0px;
+	transition:opacity 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 /* 占쌤뱄옙占쏙옙 占쌨댐옙 占쏙옙占싱아울옙 */

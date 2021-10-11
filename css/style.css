@@ -344,6 +344,7 @@ footer .company_area>p{
 	text-align:center;
 	opacity:0.5;
 	color:#fff; /* 추가 */
+	transition:opacity 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .side_nav.black ul li a{
@@ -373,6 +374,6 @@ footer .company_area>p{
 }
 
 .side_nav ul li a.active::before {
-	width:3px;
+	width:2px;
 	opacity:1;
 }
