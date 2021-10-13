@@ -69,8 +69,6 @@ $(window).on('scroll',function(){
 	let sideNav02 = $('.side_nav02').offset().top;
 	let sideNav03 = $('.side_nav03').offset().top;
 	let sideNav04 = $('.side_nav04').offset().top;
-	console.log(sideNav01);
-	console.log(s1bottom);
 	if(sideNav01 <= s1bottom){
 		$('.side_nav01').removeClass('black');
 		$('.side_nav01').addClass('white');
@@ -157,7 +155,11 @@ $('.side_nav ul li').on('click', function (e) {
 	e.preventDefault();
 
 	var target = $(this).children('a').attr('href');
-	var target_pos = $(target).offset().top;
+	if($(this).hasClass('side_nav04')){
+		var target_pos = $('.a3').offset().top + $('.a3').height();
+	}else{
+		var target_pos = $(target).offset().top;
+	}
 
 	$('html,body').stop().animate({
 		scrollTop: target_pos
@@ -178,9 +180,13 @@ $('.logo').on('click', function (e) {
 // 헤더 메뉴 클릭시 이동
 $('.header_wrap ul li').on('click', function (e) {
 	e.preventDefault();
-
+	console.log(this);
 	var target = $(this).children('a').attr('href');
+	if($(this).children('a').hasClass('tab03')){
+		var target_pos = $('.a3').offset().top + $('.a3').height();
+	}else{
 		var target_pos = $(target).offset().top;
+	}
 
 	$('html,body').stop().animate({
 		scrollTop: target_pos
