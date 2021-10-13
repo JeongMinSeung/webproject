@@ -59,14 +59,13 @@ nav ul li:hover .tab::before{
 /* section 공통 */
 
 section .content_area ul li p{
-	font-size:20px;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 /* Section1 ��Ÿ�� */
 .s1 .content_area .title_wrap{
 	transform: translateY(300px);
-    transition: 1.3s;
+    transition: all ease 2s 0s;
 }
 
 .s1 .content_area .title_wrap.on{
@@ -94,17 +93,19 @@ section .content_area ul li p{
 }
 
 /* Section2 ��Ÿ�� */
+.title_box{
+	text-align: center;
+}
+
 .title_box span{
     font-size:45px;
-    font-family:"NotoSansKR-Black","serif";
-    line-height:75px;
-    text-align:center;
-    color:#13123a;
+	padding: 10px 0 20px;
 }
 
 .title_box p{
-    font-size:23px;
-    margin-top:40px;
+	font-family: "NotoSansKR-Thin","serif";
+    font-size: 20px;
+	margin-top:40px;
 }
 
 .s2 .content_area ul li div{
@@ -113,31 +114,43 @@ section .content_area ul li p{
 	background-color:#BDBDBD;
 }
 
-/* .s2 .content_area ul li p{
-	font-size:23px;
-    margin-top:20px;
-} */
-
-/* Section3 ��Ÿ�� */
-
-/* .s3 .content_area>ul>li>p{
-	font-size:23px;
-    margin-top:20px;
-} */
-
 .s3 .comment_area{
 	text-align:left;
-	padding:30px 50px;
+	padding:20px 40px;
 }
 
 .s3 .comment_area span{
-	font-size:40px;
-	font-family:"NotoSansKR-Bold","serif";
+	display: inline-block;
+	position: relative;
+	font-size: 30px;
+	font-family:"NotoSansKR-Medium","serif";
+	padding:10px 0;
+}
+
+.s3 .comment_area span::before{
+	display: block;
+	position: absolute;
+	content: "";
+	width:30%;
+	height:3px;
+	background-color: #2A0066;
+	top:0;
+	left: 0;
+}
+
+.s3 .comment_area span::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: #5587ED;
+    top: 0;
+    left: 30%;
 }
 
 .s3 .comment_area p:nth-child(2){
 	font-size:20px;
-	padding-top:20px;
 }
 
 .s3 .comment_area p:nth-child(3){
@@ -146,10 +159,7 @@ section .content_area ul li p{
 	padding-bottom:20px;
 	color:#5D5D5D;
 	font-family:"NotoSansKR-Regular","serif";
-}
-
-.s3 .comment_area a{
-	color:#2A0066;
+	line-height: 25px;
 }
 
 /* Section4 ��Ÿ�� */
@@ -203,8 +213,12 @@ section .content_area ul li p{
 }
 
 .con1, .con2{
-	width:1000px;
-	margin: 150px auto;
+	width:1100px;
+	margin: 0px auto;
+}
+
+.s3 .con1{
+	padding-top:173.5px;
 }
 
 .con1 h2{
@@ -338,7 +352,11 @@ footer .company_area>p{
 	color:#525252;
 }
 
-/* ���̵�׺���̼�(����������ǥ�ÿ�) ��Ÿ�� */
+/* 사이드 네비게이션 스타일 지정 */
+.side_nav.disable{
+	display:none;
+}
+
 .side_nav ul li a {
 	position:relative;
 	width:50px;
@@ -380,4 +398,69 @@ footer .company_area>p{
 .side_nav ul li a.active::before {
 	width:2px;
 	opacity:1;
+}
+
+@keyframes imgAniLeft {
+    0% {transform:translateX(-101%);}
+    50% {transform:translateX(0);}
+    100% {transform:translateX(101%);}
+    }
+@keyframes imgAniRight {
+    0% {transform:translateX(101%);}
+    50% {transform:translateX(0);}
+    100% {transform:translateX(-101%);}
+    }
+@keyframes imgOpa {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    51% {opacity:1;}
+    100% {opacity:1;}
+    }
+@keyframes imgScale {
+    0% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+   }
+
+[class*=img-ani-]{position: relative;overflow: hidden;}
+[class*=img-ani-]::after{content:"";position: absolute;left:0;top:0;width:100%;height:100%;background:#f5f5f5;display: block;}
+[class*=img-ani-].v2::after{content:"";background: #fff;}
+[class*=img-ani-].active img{animation:imgOpa both 0.8s 0.2s;}
+[class*=img-ani-].active img {
+	animation: imgOpa both 0.8s 0.2s;
+}
+[class*=img-ani-] {
+	position: relative;
+    overflow: hidden;
+}
+
+.img-ani-left.active::after{ animation:imgAniLeft both 0.8s 0.2s;}
+.img-ani-right.active::after{ animation:imgAniRight both 0.8s 0.2s;}
+.slide-cont{display: none;}
+.ani-stop {
+    visibility: hidden;
+    animation-name: none !important;
+}
+
+.business_image_wrap>img{
+	width:100%;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+[class*=img-ani-]::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #f5f5f5;
+	display: block;
 }

@@ -114,25 +114,27 @@ nav ul li * {
 }
 
 .s1{
-    position: relative;
-    height:100vh;
-    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../image/main_background.jpg)no-repeat;
-    background-size: cover;
+  position: relative;
+  height:100vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../image/main_background.jpg)no-repeat;
+  background-size: cover;
 }
 
 .s2{
-    position: relative;
-    height:100vh;
+  position: relative;
+  height:100vh;
+  padding-top:173.5px;
 }
 
 .s3{
-    position: relative;
-    padding-top:173.5px;
+  position: relative;
+  padding-bottom:173.5px;
 }
 
 .s4{
 	position:relative;
 	height:100vh;
+  padding-top:173.5px;
 }
 
 /* Section1 占쏙옙占싱아울옙 */
@@ -186,10 +188,6 @@ nav ul li * {
     color:#000;
 }
 
-.s3 .content_area{
-	text-align:center;
-}
-
 /* .s3 .content_area ul{
 	padding:0px 200px;
 	width:100%;
@@ -202,7 +200,7 @@ nav ul li * {
 	margin:100px auto;
 }
 
-.s3 .content_area ul li div{
+.s3 .content_area>ul>li>div{
 	width:50%;
 	height:300px;
 	float:left;
@@ -210,8 +208,6 @@ nav ul li * {
 
 .business_area{
   position:relative;
-	padding:10px;
-	background-color:#bdbdbd;
   /* background:url('../image/test.png') no-repeat; */
   /* background-size: cover; */
   overflow: hidden;
@@ -362,4 +358,17 @@ footer .company_area{
   100% {
     opacity: 0;
   }
+}
+
+/* 반응형 설정 */
+@media screen and (min-width:1300px){
+	main{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:1300px){
+	main{
+		width:1300px;
+	}
 }
