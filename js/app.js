@@ -35,44 +35,86 @@ $(document).ready(function(){
 $(window).on('scroll',function(){
 	let sct = $(this).scrollTop();
 	let s1 = $('.s1').offset().top;
-	let s2 = $('.s2').offset().top;
-	let s3 = $('.s3').offset().top - $('header').height();
-	let s4 = $('.s4').offset().top - $('header').height();
+	let s2 = $('.s2').offset().top - $('.con1').height();
+	let s3 = $('.s3').offset().top - $('.banner_wrap').height();
+	let s4 = $('.a3').offset().top + $('header').height();
 	let solution = $('.a1').offset().top - $(window).height() + $('header').height();
 	let audit = $('.a2').offset().top - $(window).height() + $('header').height();
 	let forensic = $('.a3').offset().top - $(window).height() + $('header').height();
 	let ftr = $('footer').offset().top - $(window).height() + $('header').height();
+
 	$('.side_nav>ul>li>a').removeClass('active');
 	if(sct >= s1 && sct < s2){
-		$('.side_nav').removeClass('black');
 		$('.side_nav>ul>li').eq(0).children('a').addClass('active');
 		$('.title_wrap').addClass('on');
 		$('.subtitle').addClass('on');
 	}else if(sct >= s2 && sct < s3){
-		$('.side_nav').removeClass('black');
-		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(1).children('a').addClass('active');
 		$('.title_wrap').removeClass('on');
 		$('.subtitle').removeClass('on');
 	}else if(sct >= s3 && sct < s4){
-		$('.side_nav').removeClass('black');
-		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(2).children('a').addClass('active');
 		$('.title_wrap').removeClass('on');
 		$('.subtitle').removeClass('on');
 	}else if(sct >= s4){
-		$('.side_nav').removeClass('black');
-		$('.side_nav').addClass('black');
 		$('.side_nav>ul>li').eq(3).children('a').addClass('active');
 		$('.title_wrap').removeClass('on');
 		$('.subtitle').removeClass('on');
 	}
 
-	if(sct >= ftr){
-		$('.side_nav').addClass('disable');
+	let s1bottom = $('.s2').offset().top;
+	let s3top = $('.s3').offset().top;
+	let s3banner = s3top + $('.title_box').height();
+	let sideNav01 = $('.side_nav01').offset().top;
+	let sideNav02 = $('.side_nav02').offset().top;
+	let sideNav03 = $('.side_nav03').offset().top;
+	let sideNav04 = $('.side_nav04').offset().top;
+	console.log(sideNav01);
+	console.log(s1bottom);
+	if(sideNav01 <= s1bottom){
+		$('.side_nav01').removeClass('black');
+		$('.side_nav01').addClass('white');
+	}else if(sideNav01<s3banner&&sideNav01>=s3top){
+		$('.side_nav01').removeClass('black');
+		$('.side_nav01').addClass('white');
 	}else{
-		$('.side_nav').removeClass('disable');
+		$('.side_nav01').removeClass('white');
+		$('.side_nav01').addClass('black');
 	}
+
+	if(sideNav02 <= s1bottom){
+		$('.side_nav02').removeClass('black');
+		$('.side_nav02').addClass('white');
+	}else if(sideNav02<s3banner&&sideNav02>=s3top){
+		$('.side_nav02').removeClass('black');
+		$('.side_nav02').addClass('white');
+	}else{
+		$('.side_nav02').removeClass('white');
+		$('.side_nav02').addClass('black');
+	}
+
+	if(sideNav03 <= s1bottom){
+		$('.side_nav03').removeClass('black');
+		$('.side_nav03').addClass('white');
+	}else if(sideNav03<s3banner&&sideNav03>=s3top){
+		$('.side_nav03').removeClass('black');
+		$('.side_nav03').addClass('white');
+	}else{
+		$('.side_nav03').removeClass('white');
+		$('.side_nav03').addClass('black');
+	}
+
+	if(sideNav04 <= s1bottom){
+		$('.side_nav04').removeClass('black');
+		$('.side_nav04').addClass('white');
+	}else if(sideNav04<s3banner&&sideNav04>=s3top){
+		$('.side_nav04').removeClass('black');
+		$('.side_nav04').addClass('white');
+	}else{
+		$('.side_nav04').removeClass('white');
+		$('.side_nav04').addClass('black');
+	}
+
 	if(sct >= solution && $('.a1').children('.business_image_wrap').hasClass('ani-stop')){
 		$('.a1').children('.business_image_wrap').removeClass('ani-stop');
 		$('.a1').children('.business_image_wrap').addClass('active');
@@ -138,28 +180,12 @@ $('.header_wrap ul li').on('click', function (e) {
 	e.preventDefault();
 
 	var target = $(this).children('a').attr('href');
-	if($(this).children('a').hasClass('tab01')){
-		var target_pos = $(target).offset().top;	
-	}else{
-		var target_pos = $(target).offset().top - $(target).height();
-	}
+		var target_pos = $(target).offset().top;
 
 	$('html,body').stop().animate({
 		scrollTop: target_pos
 	}, 700, 'swing');
 });
-
-$('.contactus').on('click', function (e) {
-	e.preventDefault();
-
-	var target = $(this).children('a').attr('href');
-	var target_pos = $(target).offset().top;
-
-	$('html,body').stop().animate({
-		scrollTop: target_pos
-	}, 700, 'swing');
-});
-
 //var posTop =(page-1) * $(window).height();
 //    mHtml.animate({scrollTop : posTop});
 /*

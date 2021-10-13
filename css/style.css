@@ -371,12 +371,20 @@ footer .company_area>p{
 	transition:opacity 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.side_nav.black ul li a{
+.side_nav>ul>.black>a{
 	color:#13123a;
 }
 
-.side_nav.black ul li a::before{
+.side_nav>ul>.black>a::before{
 	background: #13123a;
+}
+
+.side_nav>ul>.white>a{
+	color:#FFF;
+}
+
+.side_nav>ul>.white>a::before{
+	background: #FFF;
 }
 
 
@@ -389,7 +397,6 @@ footer .company_area>p{
 	width:2px;
 	transition:width 0.2s ease-in-out, background 0.2s ease-in-out;
 	opacity:0.5;
-	background: #fff;
 }
 
 .side_nav ul li a.active {
