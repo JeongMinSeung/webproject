@@ -1,10 +1,3 @@
-const button=()=>{
-	const viewall = document.querySelector('.viewall');
-	viewall.addEventListener('click',()=>{
-		viewall.classList.toggle('toggle');
-	});
-}
-button();
 
 var mHtml = $("html");
 var page = 1;
@@ -105,6 +98,17 @@ $(window).on('scroll',function(){
 	}
 })
 
+$('.viewall').on('click', function () {
+	if($('header').hasClass('white')){
+		$('header').removeClass('white');
+		$('header').addClass('black');
+		$('.viewall_menu').addClass('active');
+	}else{
+		$('header').removeClass('black');
+		$('header').addClass('white');
+		$('.viewall_menu').removeClass('active');
+	}
+});
 
 // sideNav 클릭시 이동
 $('.side_nav ul li').on('click', function (e) {
@@ -139,6 +143,17 @@ $('.header_wrap ul li').on('click', function (e) {
 	}else{
 		var target_pos = $(target).offset().top - $(target).height();
 	}
+
+	$('html,body').stop().animate({
+		scrollTop: target_pos
+	}, 700, 'swing');
+});
+
+$('.contactus').on('click', function (e) {
+	e.preventDefault();
+
+	var target = $(this).children('a').attr('href');
+	var target_pos = $(target).offset().top;
 
 	$('html,body').stop().animate({
 		scrollTop: target_pos

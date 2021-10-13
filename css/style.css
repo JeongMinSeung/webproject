@@ -341,14 +341,16 @@ footer .company_area p{
 	font-size:15px;
 	padding:5px 0;
 	color:#000;
+	display: inline-block;
+	margin-right:20px;
 }
 
 footer .company_area .company_info{
-	padding-top:20px;
+	padding-top:10px;
 }
 
 footer .company_area>p{
-	padding-top:20px;
+	padding-top:10px;
 	color:#525252;
 }
 
