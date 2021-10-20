@@ -81,13 +81,6 @@ nav ul li * {
 .side_nav ul li *{
 	cursor:pointer;
 }
-/* 占쌤뱄옙占쏙옙 占쌨댐옙 占쏙옙占싱아울옙 */
-.viewall{
-	float:left;
-	padding:34.5px 20px;
-	margin-right:-20px;
-	cursor:pointer;
-}
 
 .contactus{
 	float:left;
@@ -120,30 +113,6 @@ nav ul li * {
 .contactus:hover a::before{
 	width:70px;
 	background-color:#FFF;
-}
-
-.viewall *{
-	cursor:pointer;
-}
-
-.viewall div{
-	width:25px;
-	height:3px;
-	background-color:#FFF;
-	margin:3px;
-	transition:all 0.4s ease;
-}
-
-.toggle .line1{
-	transform:rotate(-45deg) translate(-3px,6px);
-}
-
-.toggle .line2{
-	opacity:0;
-}
-
-.toggle .line3{
-	transform:rotate(45deg) translate(-3px,-6px);
 }
 
 .s1{
@@ -187,7 +156,6 @@ nav ul li * {
     overflow:hidden;
 }
 
-/* Section2 占쏙옙占싱아울옙 */
 .s2 .content_wrap{
     display: flex;
     align-items:center;
@@ -212,17 +180,11 @@ nav ul li * {
 	margin:0px 50px;
 }
 
-/* Section3 占쏙옙占싱아울옙 */
 .s3 .content_wrap{
     position: relative;
     width:100%;
     color:#000;
 }
-
-/* .s3 .content_area ul{
-	padding:0px 200px;
-	width:100%;
-} */
 
 .s3 .content_area ul li{
 	position:relative;
@@ -232,24 +194,26 @@ nav ul li * {
 }
 
 .s3 .content_area>ul>li>div{
+  width:50%;
+  height:300px;
+  float:left;
+}
+
+.solution_area{
 	width:50%;
-	height:300px;
+	height:200px;
 	float:left;
 }
 
 .business_area{
   position:relative;
-  /* background:url('../image/test.png') no-repeat; */
-  /* background-size: cover; */
   overflow: hidden;
 
 }
 
-/* Section4 占쏙옙占싱아울옙 */
 .s4 .content_wrap{
     position: relative;
     top:20%;
-    /* width:100%; */
     width:1000px;
     margin:0 auto;
     color:#000;
@@ -264,20 +228,17 @@ nav ul li * {
 }
 
 .s4 .partner_area{
-	/* width:900px; */
 	margin:0 auto;
 	display:flex;
 }
 
 .s4 .partner_area div{
-	/* width:300px; */
   width:33.3333%;
 	height:200px;
 	border:1px dotted #000;
 	float:left;
 }
 
-/* FOOTER 占쏙옙占싱아울옙 */
 footer{
 	position:relative;
 	background:#e7e6e6;
@@ -286,10 +247,12 @@ footer{
 .footer_logo{
 	float:right;
 	right:0;
-	width:100px;
-	height:100px;
+	width:180px;
+	height:40px;
 	background-color:#bdbdbd;
 	text-align:center;
+  background:url(../image/logo_footer.png)no-repeat center;
+  background-size: 180px;
 }
 
 footer .content_wrap{
@@ -319,7 +282,6 @@ footer .company_area{
 	padding-top:10px;
 }
 
-/* 占쏙옙占쎌스 占쏙옙크占쏙옙 占쏙옙占싱아울옙 */
 .scroll_wrap{
 	position:absolute;
 	bottom:0%;
@@ -392,7 +354,6 @@ footer .company_area{
   }
 }
 
-/* 반응형 설정 */
 @media screen and (min-width:1300px){
 	main{
 		width:100%;
